@@ -25,15 +25,15 @@ Brute-Force Attack using HYDRA
 <pre>hydra -l Admin123 -P /usr/share/wordlists/rockyou.txt testasp.vulnweb.com http-post-form "/Login.asp:tfUName=^USER^&tfUPass=^PASS^&Login=Login:Invalid Login" -V</pre>
 Breakdown:<br>
 hydra -> Tool<br>
--l -> username (If Known) - If not known then -L with word.txt
-Admin123 -> known Username
--P -> Password list
-/usr/share/wordlists/rockyou.txt or pass.txt you made earlier throughh crunch.
-testasp.vulnweb.com -> Target website
-http-post-form -> Form using POST method
-/Login.asp: -> Login page of the target website
-tfUName -> usernmae field (You may find using inspect elements of the browser and selecting username field you may find HTML tag property name=tfUName)
-&tfUPass -> password field (You may find using inspect elements of the browser and selecting password field you may find HTML tag property name=tfUPass)
-&Login=Login: -> For Login button
-Invalid Login -> Check for the login error message when entering wrong password therefore hydra keeps trying to attempt until login is successful and invalid login is not thrown back.
--V - Verbose 
+-l -> username (If Known) - If not known then -L with word.txt<br>
+Admin123 -> known Username<br>
+-P -> Password list<br>
+/usr/share/wordlists/rockyou.txt or pass.txt you made earlier throughh crunch.<br>
+testasp.vulnweb.com -> Target website<br>
+http-post-form -> Form using POST method<br>
+/Login.asp: -> Login page of the target website<br>
+tfUName -> usernmae field (You may find using inspect elements of the browser and selecting username field you may find HTML tag property name=tfUName)<br>
+&tfUPass -> password field (You may find using inspect elements of the browser and selecting password field you may find HTML tag property name=tfUPass)<br>
+&Login=Login: -> For Login button<br>
+Invalid Login -> Check for the login error message when entering wrong password therefore hydra keeps trying to attempt until login is successful and invalid login is not thrown back.<br>
+-V - Verbose <br>
